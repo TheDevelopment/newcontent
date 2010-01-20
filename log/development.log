@@ -1,0 +1,1105 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (0.0ms)[0m   [0mMysql::Error: Table 'contents_development.contents' doesn't exist: SHOW FIELDS FROM `contents`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (0.0ms)[0m   [0mMysql::Error: Table 'contents_development.contents' doesn't exist: SHOW FIELDS FROM `contents`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (0.0ms)[0m   [0mMysql::Error: Table 'contents_development.contents' doesn't exist: SHOW FIELDS FROM `contents`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (83.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (135.6ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContents (20100119054518)
+  [4;36;1mSQL (95.0ms)[0m   [0;1mCREATE TABLE `contents` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `filename` varchar(255), `hash` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (102.6ms)[0m   [0mCREATE INDEX `index_contents_on_hash` ON `contents` (`hash`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100119054518')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `contents`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `contents`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `contents`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`hash` = 'app/controllers/application_controller.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`hash` = 'app/controllers/application_controller.rb') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (70.7ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (244.1ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContents (20100119054518)
+  [4;36;1mSQL (112.8ms)[0m   [0;1mCREATE TABLE `contents` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `filename` varchar(255), `md5_hash` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (112.7ms)[0m   [0mCREATE INDEX `index_contents_on_md5_hash` ON `contents` (`md5_hash`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100119054518')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `contents`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `contents`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `contents`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/controllers/application_controller.rb') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (128.7ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (202.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContents (20100119054518)
+  [4;36;1mSQL (94.7ms)[0m   [0;1mCREATE TABLE `contents` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `filename` varchar(255), `path` varchar(255), `md5_hash` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (110.8ms)[0m   [0mCREATE INDEX `index_contents_on_md5_hash` ON `contents` (`md5_hash`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100119054518')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `contents`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `contents`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `contents`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/controllers/application_controller.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.3ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:02', '2010-01-19 10:34:02', 'application_controller.rb', '/Users/local/Home/Programming/new_content/app/controllers', '6ff50d84edd86fb977b707199dd300bd')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/helpers/application_helper.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:02', '2010-01-19 10:34:02', 'application_helper.rb', '/Users/local/Home/Programming/new_content/app/helpers', '3a1f28b1e560cf597cd3f2a9afade628')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/models/content.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:02', '2010-01-19 10:34:02', 'content.rb', '/Users/local/Home/Programming/new_content/app/models', '1e541111dda80000126442d4a2b4e016')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/boot.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:02', '2010-01-19 10:34:02', 'boot.rb', '/Users/local/Home/Programming/new_content/config', 'cfce6ac16974777a93c14be034b2fdec')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/database.yml') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:02', '2010-01-19 10:34:02', 'database.yml', '/Users/local/Home/Programming/new_content/config', '659baf6510f7f53d86f2225edc8e6c8a')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/environment.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:02', '2010-01-19 10:34:02', 'environment.rb', '/Users/local/Home/Programming/new_content/config', 'c2c0ef1fba8f79b84d77829dc0f6e755')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/environments/development.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:02', '2010-01-19 10:34:02', 'development.rb', '/Users/local/Home/Programming/new_content/config/environments', 'be8ff9efffa8df9afa2c5d2a9ec94194')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/environments/production.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'production.rb', '/Users/local/Home/Programming/new_content/config/environments', '5db87b03fcaaad7b8901182de77f2e0e')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/environments/test.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'test.rb', '/Users/local/Home/Programming/new_content/config/environments', 'd11330dc228b63ec5cba54c29dc41abd')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.4ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/backtrace_silencers.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'backtrace_silencers.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'ca8db2f40b067cb8615263fa5a238517')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/inflections.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'inflections.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'acc71445fc1c65ebe6fdeba695fea714')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/mime_types.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'mime_types.rb', '/Users/local/Home/Programming/new_content/config/initializers', '53b1216a09d1bbd2863d09a5db5318f0')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/new_rails_defaults.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'new_rails_defaults.rb', '/Users/local/Home/Programming/new_content/config/initializers', '9c28744b57d3e826253b694e67dc2599')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/session_store.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'session_store.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'bb94f27f9a5522a34fd63cbcffbc27ce')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/locales/en.yml') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'en.yml', '/Users/local/Home/Programming/new_content/config/locales', '16efc327461a7bdac033b4897171b5c6')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/routes.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'routes.rb', '/Users/local/Home/Programming/new_content/config', '6d765178811f083a0fe9d17ce39a88de')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db/migrate/20100119054518_create_contents.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', '20100119054518_create_contents.rb', '/Users/local/Home/Programming/new_content/db/migrate', 'a38904f841ec9a29f5a63853f34f8f9b')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db/schema.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'schema.rb', '/Users/local/Home/Programming/new_content/db', '819cb005c31f30d83e9a9818cf503418')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db/seeds.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'seeds.rb', '/Users/local/Home/Programming/new_content/db', 'ed898c4b5ab1fa94ee2275229573165e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'doc/README_FOR_APP') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'README_FOR_APP', '/Users/local/Home/Programming/new_content/doc', '6b2973f35d584590c045b1f6bc78a8cb')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'lib/scan.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'scan.rb', '/Users/local/Home/Programming/new_content/lib', '35c28053386649296640217d149b922d')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'log/development.log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'development.log', '/Users/local/Home/Programming/new_content/log', '6865bf46769b6b626581a8882d1f3951')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.6ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'log/production.log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'production.log', '/Users/local/Home/Programming/new_content/log', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'log/server.log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'server.log', '/Users/local/Home/Programming/new_content/log', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'log/test.log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'test.log', '/Users/local/Home/Programming/new_content/log', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/404.html') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', '404.html', '/Users/local/Home/Programming/new_content/public', 'adc851c2e0698b5d05ef0380ed69f6b9')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/422.html') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', '422.html', '/Users/local/Home/Programming/new_content/public', 'c6bd78379a0ad92caa6cbef7de676ce8')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/500.html') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', '500.html', '/Users/local/Home/Programming/new_content/public', '5b2d690ba72c890af0abdf5ee5c46c94')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/favicon.ico') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'favicon.ico', '/Users/local/Home/Programming/new_content/public', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/images/rails.png') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'rails.png', '/Users/local/Home/Programming/new_content/public/images', '9c0a079bdd7701d7e729bd956823d153')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/index.html') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'index.html', '/Users/local/Home/Programming/new_content/public', '5b604b957a4e2d82086183ccbc197566')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/application.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'application.js', '/Users/local/Home/Programming/new_content/public/javascripts', '8a750594360b0bd302e15147eacadc9a')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/controls.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'controls.js', '/Users/local/Home/Programming/new_content/public/javascripts', '136701e951925f3dcb84f9a231f9326e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/dragdrop.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'dragdrop.js', '/Users/local/Home/Programming/new_content/public/javascripts', '3aa08ad9af21eb305a120e2e1a47d1af')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/effects.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'effects.js', '/Users/local/Home/Programming/new_content/public/javascripts', 'a7d95dc040992701ba78fd5b97af950e')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/prototype.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'prototype.js', '/Users/local/Home/Programming/new_content/public/javascripts', 'b5684120e496c310977713be34be4868')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/robots.txt') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'robots.txt', '/Users/local/Home/Programming/new_content/public', 'be860f6d2760c884906a9180451d799f')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'Rakefile') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'Rakefile', '/Users/local/Home/Programming/new_content', '17f2f134da4cd31ea095d5868ca89e86')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'README') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'README', '/Users/local/Home/Programming/new_content', 'a58e68a7599c976f071d5b9c6fa67fb3')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/about') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'about', '/Users/local/Home/Programming/new_content/script', 'bb7a6f3db064c7cbd48684501a1964fb')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/console') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'console', '/Users/local/Home/Programming/new_content/script', '623b2f8265970f73bdb3489872d00eb6')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/dbconsole') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'dbconsole', '/Users/local/Home/Programming/new_content/script', '1fd5fa2d4aeee5b4111a40f62ae85446')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/destroy') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'destroy', '/Users/local/Home/Programming/new_content/script', '95866cb3b894816b540afd282b952618')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/generate') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'generate', '/Users/local/Home/Programming/new_content/script', 'fb51df9bca94c25a928f40468354700f')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/performance/benchmarker') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'benchmarker', '/Users/local/Home/Programming/new_content/script/performance', '33063b7a3d4dbef12ac8bcb55a5e6e3e')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/performance/profiler') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'profiler', '/Users/local/Home/Programming/new_content/script/performance', '9d3b872769337c49e648b9fe47e4e280')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/plugin') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'plugin', '/Users/local/Home/Programming/new_content/script', 'db0dd437d39c21fe52e1fc05a0680163')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/runner') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'runner', '/Users/local/Home/Programming/new_content/script', '0cccc4eabf129ebd7b571d3eceda8893')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/scan.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'scan.rb', '/Users/local/Home/Programming/new_content/script', 'faaefddee8fa244163b292dad3d752d8')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/server') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'server', '/Users/local/Home/Programming/new_content/script', 'ff97a702418dbc85fec089b97506281f')[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'spec/fixtures/contents.yml') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'contents.yml', '/Users/local/Home/Programming/new_content/spec/fixtures', '1287233cf9785d72342f930972d71f0d')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'spec/models/content_spec.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'content_spec.rb', '/Users/local/Home/Programming/new_content/spec/models', 'ffa787d0aa8b59d8f48d5adc558f4eff')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'test/performance/browsing_test.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'browsing_test.rb', '/Users/local/Home/Programming/new_content/test/performance', 'e1fb638b6ec58434ec3968c2b733a004')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'test/test_helper.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:03', '2010-01-19 10:34:03', 'test_helper.rb', '/Users/local/Home/Programming/new_content/test', 'e297614c72684d065aef001f86188732')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/controllers/application_controller.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'application_controller.rb', '/Users/local/Home/Programming/new_content/app/controllers', '6ff50d84edd86fb977b707199dd300bd')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/helpers/application_helper.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'application_helper.rb', '/Users/local/Home/Programming/new_content/app/helpers', '3a1f28b1e560cf597cd3f2a9afade628')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/models/content.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'content.rb', '/Users/local/Home/Programming/new_content/app/models', '1e541111dda80000126442d4a2b4e016')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/boot.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'boot.rb', '/Users/local/Home/Programming/new_content/config', 'cfce6ac16974777a93c14be034b2fdec')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/database.yml') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'database.yml', '/Users/local/Home/Programming/new_content/config', '659baf6510f7f53d86f2225edc8e6c8a')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/environment.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'environment.rb', '/Users/local/Home/Programming/new_content/config', 'c2c0ef1fba8f79b84d77829dc0f6e755')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/environments/development.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'development.rb', '/Users/local/Home/Programming/new_content/config/environments', 'be8ff9efffa8df9afa2c5d2a9ec94194')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/environments/production.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'production.rb', '/Users/local/Home/Programming/new_content/config/environments', '5db87b03fcaaad7b8901182de77f2e0e')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/environments/test.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'test.rb', '/Users/local/Home/Programming/new_content/config/environments', 'd11330dc228b63ec5cba54c29dc41abd')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/backtrace_silencers.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'backtrace_silencers.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'ca8db2f40b067cb8615263fa5a238517')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/inflections.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'inflections.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'acc71445fc1c65ebe6fdeba695fea714')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/mime_types.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'mime_types.rb', '/Users/local/Home/Programming/new_content/config/initializers', '53b1216a09d1bbd2863d09a5db5318f0')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/new_rails_defaults.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'new_rails_defaults.rb', '/Users/local/Home/Programming/new_content/config/initializers', '9c28744b57d3e826253b694e67dc2599')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/initializers/session_store.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'session_store.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'bb94f27f9a5522a34fd63cbcffbc27ce')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/locales/en.yml') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'en.yml', '/Users/local/Home/Programming/new_content/config/locales', '16efc327461a7bdac033b4897171b5c6')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'config/routes.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'routes.rb', '/Users/local/Home/Programming/new_content/config', '6d765178811f083a0fe9d17ce39a88de')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db/migrate/20100119054518_create_contents.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', '20100119054518_create_contents.rb', '/Users/local/Home/Programming/new_content/db/migrate', 'a38904f841ec9a29f5a63853f34f8f9b')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db/schema.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'schema.rb', '/Users/local/Home/Programming/new_content/db', '819cb005c31f30d83e9a9818cf503418')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db/seeds.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'seeds.rb', '/Users/local/Home/Programming/new_content/db', 'ed898c4b5ab1fa94ee2275229573165e')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'doc/README_FOR_APP') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'README_FOR_APP', '/Users/local/Home/Programming/new_content/doc', '6b2973f35d584590c045b1f6bc78a8cb')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'lib/scan.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'scan.rb', '/Users/local/Home/Programming/new_content/lib', '35c28053386649296640217d149b922d')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'log/development.log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'development.log', '/Users/local/Home/Programming/new_content/log', 'b2c54c14d2fe29006399236462cc0399')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'log/production.log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'production.log', '/Users/local/Home/Programming/new_content/log', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'log/server.log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'server.log', '/Users/local/Home/Programming/new_content/log', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'log/test.log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'test.log', '/Users/local/Home/Programming/new_content/log', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/404.html') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', '404.html', '/Users/local/Home/Programming/new_content/public', 'adc851c2e0698b5d05ef0380ed69f6b9')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/422.html') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', '422.html', '/Users/local/Home/Programming/new_content/public', 'c6bd78379a0ad92caa6cbef7de676ce8')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/500.html') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', '500.html', '/Users/local/Home/Programming/new_content/public', '5b2d690ba72c890af0abdf5ee5c46c94')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/favicon.ico') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.3ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'favicon.ico', '/Users/local/Home/Programming/new_content/public', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/images/rails.png') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'rails.png', '/Users/local/Home/Programming/new_content/public/images', '9c0a079bdd7701d7e729bd956823d153')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/index.html') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'index.html', '/Users/local/Home/Programming/new_content/public', '5b604b957a4e2d82086183ccbc197566')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/application.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'application.js', '/Users/local/Home/Programming/new_content/public/javascripts', '8a750594360b0bd302e15147eacadc9a')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/controls.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'controls.js', '/Users/local/Home/Programming/new_content/public/javascripts', '136701e951925f3dcb84f9a231f9326e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/dragdrop.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'dragdrop.js', '/Users/local/Home/Programming/new_content/public/javascripts', '3aa08ad9af21eb305a120e2e1a47d1af')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/effects.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'effects.js', '/Users/local/Home/Programming/new_content/public/javascripts', 'a7d95dc040992701ba78fd5b97af950e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/javascripts/prototype.js') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'prototype.js', '/Users/local/Home/Programming/new_content/public/javascripts', 'b5684120e496c310977713be34be4868')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'public/robots.txt') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'robots.txt', '/Users/local/Home/Programming/new_content/public', 'be860f6d2760c884906a9180451d799f')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'Rakefile') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'Rakefile', '/Users/local/Home/Programming/new_content', '17f2f134da4cd31ea095d5868ca89e86')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'README') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'README', '/Users/local/Home/Programming/new_content', 'a58e68a7599c976f071d5b9c6fa67fb3')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/about') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'about', '/Users/local/Home/Programming/new_content/script', 'bb7a6f3db064c7cbd48684501a1964fb')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/console') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'console', '/Users/local/Home/Programming/new_content/script', '623b2f8265970f73bdb3489872d00eb6')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/dbconsole') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'dbconsole', '/Users/local/Home/Programming/new_content/script', '1fd5fa2d4aeee5b4111a40f62ae85446')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/destroy') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'destroy', '/Users/local/Home/Programming/new_content/script', '95866cb3b894816b540afd282b952618')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/generate') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'generate', '/Users/local/Home/Programming/new_content/script', 'fb51df9bca94c25a928f40468354700f')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/performance/benchmarker') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'benchmarker', '/Users/local/Home/Programming/new_content/script/performance', '33063b7a3d4dbef12ac8bcb55a5e6e3e')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/performance/profiler') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'profiler', '/Users/local/Home/Programming/new_content/script/performance', '9d3b872769337c49e648b9fe47e4e280')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/plugin') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'plugin', '/Users/local/Home/Programming/new_content/script', 'db0dd437d39c21fe52e1fc05a0680163')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/runner') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'runner', '/Users/local/Home/Programming/new_content/script', '0cccc4eabf129ebd7b571d3eceda8893')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/scan.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'scan.rb', '/Users/local/Home/Programming/new_content/script', 'faaefddee8fa244163b292dad3d752d8')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'script/server') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'server', '/Users/local/Home/Programming/new_content/script', 'ff97a702418dbc85fec089b97506281f')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'spec/fixtures/contents.yml') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'contents.yml', '/Users/local/Home/Programming/new_content/spec/fixtures', '1287233cf9785d72342f930972d71f0d')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'spec/models/content_spec.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'content_spec.rb', '/Users/local/Home/Programming/new_content/spec/models', 'ffa787d0aa8b59d8f48d5adc558f4eff')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'test/performance/browsing_test.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.3ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'browsing_test.rb', '/Users/local/Home/Programming/new_content/test/performance', 'e1fb638b6ec58434ec3968c2b733a004')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'test/test_helper.rb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:34:09', '2010-01-19 10:34:09', 'test_helper.rb', '/Users/local/Home/Programming/new_content/test', 'e297614c72684d065aef001f86188732')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/controllers/application_controller.rb') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6ff50d84edd86fb977b707199dd300bd') LIMIT 1[0m
+  [4;35;1mContent Load (0.8ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'app/controllers/application_controller.rb') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (61.2ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (176.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContents (20100119054518)
+  [4;36;1mSQL (103.4ms)[0m   [0;1mCREATE TABLE `contents` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `filename` varchar(255), `path` varchar(255), `md5_hash` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (110.7ms)[0m   [0mCREATE INDEX `index_contents_on_md5_hash` ON `contents` (`md5_hash`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100119054518')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `contents`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `contents`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `contents`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6ff50d84edd86fb977b707199dd300bd') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'application_controller.rb', '/Users/local/Home/Programming/new_content/app/controllers', '6ff50d84edd86fb977b707199dd300bd')[0m
+  [4;35;1mSQL (40.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3a1f28b1e560cf597cd3f2a9afade628') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'application_helper.rb', '/Users/local/Home/Programming/new_content/app/helpers', '3a1f28b1e560cf597cd3f2a9afade628')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cde67fd3d4fbee73146ba936a8b4537b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'content.rb', '/Users/local/Home/Programming/new_content/app/models', 'cde67fd3d4fbee73146ba936a8b4537b')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cfce6ac16974777a93c14be034b2fdec') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'boot.rb', '/Users/local/Home/Programming/new_content/config', 'cfce6ac16974777a93c14be034b2fdec')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '659baf6510f7f53d86f2225edc8e6c8a') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'database.yml', '/Users/local/Home/Programming/new_content/config', '659baf6510f7f53d86f2225edc8e6c8a')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c2c0ef1fba8f79b84d77829dc0f6e755') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'environment.rb', '/Users/local/Home/Programming/new_content/config', 'c2c0ef1fba8f79b84d77829dc0f6e755')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be8ff9efffa8df9afa2c5d2a9ec94194') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'development.rb', '/Users/local/Home/Programming/new_content/config/environments', 'be8ff9efffa8df9afa2c5d2a9ec94194')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5db87b03fcaaad7b8901182de77f2e0e') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'production.rb', '/Users/local/Home/Programming/new_content/config/environments', '5db87b03fcaaad7b8901182de77f2e0e')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd11330dc228b63ec5cba54c29dc41abd') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'test.rb', '/Users/local/Home/Programming/new_content/config/environments', 'd11330dc228b63ec5cba54c29dc41abd')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ca8db2f40b067cb8615263fa5a238517') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'backtrace_silencers.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'ca8db2f40b067cb8615263fa5a238517')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'acc71445fc1c65ebe6fdeba695fea714') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'inflections.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'acc71445fc1c65ebe6fdeba695fea714')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '53b1216a09d1bbd2863d09a5db5318f0') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'mime_types.rb', '/Users/local/Home/Programming/new_content/config/initializers', '53b1216a09d1bbd2863d09a5db5318f0')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c28744b57d3e826253b694e67dc2599') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'new_rails_defaults.rb', '/Users/local/Home/Programming/new_content/config/initializers', '9c28744b57d3e826253b694e67dc2599')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb94f27f9a5522a34fd63cbcffbc27ce') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'session_store.rb', '/Users/local/Home/Programming/new_content/config/initializers', 'bb94f27f9a5522a34fd63cbcffbc27ce')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '16efc327461a7bdac033b4897171b5c6') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'en.yml', '/Users/local/Home/Programming/new_content/config/locales', '16efc327461a7bdac033b4897171b5c6')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6d765178811f083a0fe9d17ce39a88de') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'routes.rb', '/Users/local/Home/Programming/new_content/config', '6d765178811f083a0fe9d17ce39a88de')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a38904f841ec9a29f5a63853f34f8f9b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', '20100119054518_create_contents.rb', '/Users/local/Home/Programming/new_content/db/migrate', 'a38904f841ec9a29f5a63853f34f8f9b')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '819cb005c31f30d83e9a9818cf503418') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'schema.rb', '/Users/local/Home/Programming/new_content/db', '819cb005c31f30d83e9a9818cf503418')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ed898c4b5ab1fa94ee2275229573165e') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'seeds.rb', '/Users/local/Home/Programming/new_content/db', 'ed898c4b5ab1fa94ee2275229573165e')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6b2973f35d584590c045b1f6bc78a8cb') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'README_FOR_APP', '/Users/local/Home/Programming/new_content/doc', '6b2973f35d584590c045b1f6bc78a8cb')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '35c28053386649296640217d149b922d') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'scan.rb', '/Users/local/Home/Programming/new_content/lib', '35c28053386649296640217d149b922d')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '25c0eddd261839d90102b9c866a0cb74') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.2ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'development.log', '/Users/local/Home/Programming/new_content/log', '863d9f94c622ca2131bbdb706c5c90a9')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'production.log', '/Users/local/Home/Programming/new_content/log', 'd41d8cd98f00b204e9800998ecf8427e')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'adc851c2e0698b5d05ef0380ed69f6b9') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', '404.html', '/Users/local/Home/Programming/new_content/public', 'adc851c2e0698b5d05ef0380ed69f6b9')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c6bd78379a0ad92caa6cbef7de676ce8') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', '422.html', '/Users/local/Home/Programming/new_content/public', 'c6bd78379a0ad92caa6cbef7de676ce8')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b2d690ba72c890af0abdf5ee5c46c94') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Create (0.1ms)[0m   [0;1mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', '500.html', '/Users/local/Home/Programming/new_content/public', '5b2d690ba72c890af0abdf5ee5c46c94')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c0a079bdd7701d7e729bd956823d153') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'rails.png', '/Users/local/Home/Programming/new_content/public/images', '9c0a079bdd7701d7e729bd956823d153')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b604b957a4e2d82086183ccbc197566') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'index.html', '/Users/local/Home/Programming/new_content/public', '5b604b957a4e2d82086183ccbc197566')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '8a750594360b0bd302e15147eacadc9a') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'application.js', '/Users/local/Home/Programming/new_content/public/javascripts', '8a750594360b0bd302e15147eacadc9a')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '136701e951925f3dcb84f9a231f9326e') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'controls.js', '/Users/local/Home/Programming/new_content/public/javascripts', '136701e951925f3dcb84f9a231f9326e')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3aa08ad9af21eb305a120e2e1a47d1af') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'dragdrop.js', '/Users/local/Home/Programming/new_content/public/javascripts', '3aa08ad9af21eb305a120e2e1a47d1af')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a7d95dc040992701ba78fd5b97af950e') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'effects.js', '/Users/local/Home/Programming/new_content/public/javascripts', 'a7d95dc040992701ba78fd5b97af950e')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'b5684120e496c310977713be34be4868') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'prototype.js', '/Users/local/Home/Programming/new_content/public/javascripts', 'b5684120e496c310977713be34be4868')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be860f6d2760c884906a9180451d799f') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'robots.txt', '/Users/local/Home/Programming/new_content/public', 'be860f6d2760c884906a9180451d799f')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '17f2f134da4cd31ea095d5868ca89e86') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'Rakefile', '/Users/local/Home/Programming/new_content', '17f2f134da4cd31ea095d5868ca89e86')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.3ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a58e68a7599c976f071d5b9c6fa67fb3') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.2ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'README', '/Users/local/Home/Programming/new_content', 'a58e68a7599c976f071d5b9c6fa67fb3')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb7a6f3db064c7cbd48684501a1964fb') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'about', '/Users/local/Home/Programming/new_content/script', 'bb7a6f3db064c7cbd48684501a1964fb')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.4ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '623b2f8265970f73bdb3489872d00eb6') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'console', '/Users/local/Home/Programming/new_content/script', '623b2f8265970f73bdb3489872d00eb6')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1fd5fa2d4aeee5b4111a40f62ae85446') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.2ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'dbconsole', '/Users/local/Home/Programming/new_content/script', '1fd5fa2d4aeee5b4111a40f62ae85446')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '95866cb3b894816b540afd282b952618') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'destroy', '/Users/local/Home/Programming/new_content/script', '95866cb3b894816b540afd282b952618')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'fb51df9bca94c25a928f40468354700f') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'generate', '/Users/local/Home/Programming/new_content/script', 'fb51df9bca94c25a928f40468354700f')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '33063b7a3d4dbef12ac8bcb55a5e6e3e') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'benchmarker', '/Users/local/Home/Programming/new_content/script/performance', '33063b7a3d4dbef12ac8bcb55a5e6e3e')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9d3b872769337c49e648b9fe47e4e280') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'profiler', '/Users/local/Home/Programming/new_content/script/performance', '9d3b872769337c49e648b9fe47e4e280')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db0dd437d39c21fe52e1fc05a0680163') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'plugin', '/Users/local/Home/Programming/new_content/script', 'db0dd437d39c21fe52e1fc05a0680163')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '0cccc4eabf129ebd7b571d3eceda8893') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'runner', '/Users/local/Home/Programming/new_content/script', '0cccc4eabf129ebd7b571d3eceda8893')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'faaefddee8fa244163b292dad3d752d8') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'scan.rb', '/Users/local/Home/Programming/new_content/script', 'faaefddee8fa244163b292dad3d752d8')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ff97a702418dbc85fec089b97506281f') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'server', '/Users/local/Home/Programming/new_content/script', 'ff97a702418dbc85fec089b97506281f')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1287233cf9785d72342f930972d71f0d') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'contents.yml', '/Users/local/Home/Programming/new_content/spec/fixtures', '1287233cf9785d72342f930972d71f0d')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ffa787d0aa8b59d8f48d5adc558f4eff') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.4ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'content_spec.rb', '/Users/local/Home/Programming/new_content/spec/models', 'ffa787d0aa8b59d8f48d5adc558f4eff')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e1fb638b6ec58434ec3968c2b733a004') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:23', '2010-01-19 10:36:23', 'browsing_test.rb', '/Users/local/Home/Programming/new_content/test/performance', 'e1fb638b6ec58434ec3968c2b733a004')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e297614c72684d065aef001f86188732') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.1ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:24', '2010-01-19 10:36:24', 'test_helper.rb', '/Users/local/Home/Programming/new_content/test', 'e297614c72684d065aef001f86188732')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.4ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6ff50d84edd86fb977b707199dd300bd') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3a1f28b1e560cf597cd3f2a9afade628') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cde67fd3d4fbee73146ba936a8b4537b') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cfce6ac16974777a93c14be034b2fdec') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '659baf6510f7f53d86f2225edc8e6c8a') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c2c0ef1fba8f79b84d77829dc0f6e755') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be8ff9efffa8df9afa2c5d2a9ec94194') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5db87b03fcaaad7b8901182de77f2e0e') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd11330dc228b63ec5cba54c29dc41abd') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ca8db2f40b067cb8615263fa5a238517') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'acc71445fc1c65ebe6fdeba695fea714') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '53b1216a09d1bbd2863d09a5db5318f0') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c28744b57d3e826253b694e67dc2599') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb94f27f9a5522a34fd63cbcffbc27ce') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '16efc327461a7bdac033b4897171b5c6') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6d765178811f083a0fe9d17ce39a88de') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a38904f841ec9a29f5a63853f34f8f9b') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '819cb005c31f30d83e9a9818cf503418') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ed898c4b5ab1fa94ee2275229573165e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6b2973f35d584590c045b1f6bc78a8cb') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '35c28053386649296640217d149b922d') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6baeb9738acb81775fe9acd0ec0ce51c') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.2ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:26', '2010-01-19 10:36:26', 'development.log', '/Users/local/Home/Programming/new_content/log', 'ac9bb0246d52a7dfbc341bb521a141c9')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'adc851c2e0698b5d05ef0380ed69f6b9') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c6bd78379a0ad92caa6cbef7de676ce8') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b2d690ba72c890af0abdf5ee5c46c94') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c0a079bdd7701d7e729bd956823d153') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b604b957a4e2d82086183ccbc197566') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '8a750594360b0bd302e15147eacadc9a') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '136701e951925f3dcb84f9a231f9326e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3aa08ad9af21eb305a120e2e1a47d1af') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a7d95dc040992701ba78fd5b97af950e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'b5684120e496c310977713be34be4868') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be860f6d2760c884906a9180451d799f') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '17f2f134da4cd31ea095d5868ca89e86') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a58e68a7599c976f071d5b9c6fa67fb3') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb7a6f3db064c7cbd48684501a1964fb') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '623b2f8265970f73bdb3489872d00eb6') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1fd5fa2d4aeee5b4111a40f62ae85446') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '95866cb3b894816b540afd282b952618') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'fb51df9bca94c25a928f40468354700f') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '33063b7a3d4dbef12ac8bcb55a5e6e3e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9d3b872769337c49e648b9fe47e4e280') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db0dd437d39c21fe52e1fc05a0680163') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '0cccc4eabf129ebd7b571d3eceda8893') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'faaefddee8fa244163b292dad3d752d8') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ff97a702418dbc85fec089b97506281f') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1287233cf9785d72342f930972d71f0d') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ffa787d0aa8b59d8f48d5adc558f4eff') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e1fb638b6ec58434ec3968c2b733a004') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e297614c72684d065aef001f86188732') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6ff50d84edd86fb977b707199dd300bd') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3a1f28b1e560cf597cd3f2a9afade628') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cde67fd3d4fbee73146ba936a8b4537b') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cfce6ac16974777a93c14be034b2fdec') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '659baf6510f7f53d86f2225edc8e6c8a') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c2c0ef1fba8f79b84d77829dc0f6e755') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be8ff9efffa8df9afa2c5d2a9ec94194') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5db87b03fcaaad7b8901182de77f2e0e') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd11330dc228b63ec5cba54c29dc41abd') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ca8db2f40b067cb8615263fa5a238517') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'acc71445fc1c65ebe6fdeba695fea714') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '53b1216a09d1bbd2863d09a5db5318f0') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c28744b57d3e826253b694e67dc2599') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb94f27f9a5522a34fd63cbcffbc27ce') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '16efc327461a7bdac033b4897171b5c6') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6d765178811f083a0fe9d17ce39a88de') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a38904f841ec9a29f5a63853f34f8f9b') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '819cb005c31f30d83e9a9818cf503418') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ed898c4b5ab1fa94ee2275229573165e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6b2973f35d584590c045b1f6bc78a8cb') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '35c28053386649296640217d149b922d') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '8c9117c96b42f42dc216c2ff17932286') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Create (0.2ms)[0m   [0mINSERT INTO `contents` (`created_at`, `updated_at`, `filename`, `path`, `md5_hash`) VALUES('2010-01-19 10:36:28', '2010-01-19 10:36:28', 'development.log', '/Users/local/Home/Programming/new_content/log', '1220cc7daf89cba2755da22428623fd4')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'adc851c2e0698b5d05ef0380ed69f6b9') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c6bd78379a0ad92caa6cbef7de676ce8') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b2d690ba72c890af0abdf5ee5c46c94') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c0a079bdd7701d7e729bd956823d153') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b604b957a4e2d82086183ccbc197566') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '8a750594360b0bd302e15147eacadc9a') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '136701e951925f3dcb84f9a231f9326e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3aa08ad9af21eb305a120e2e1a47d1af') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a7d95dc040992701ba78fd5b97af950e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'b5684120e496c310977713be34be4868') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be860f6d2760c884906a9180451d799f') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '17f2f134da4cd31ea095d5868ca89e86') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a58e68a7599c976f071d5b9c6fa67fb3') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb7a6f3db064c7cbd48684501a1964fb') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '623b2f8265970f73bdb3489872d00eb6') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1fd5fa2d4aeee5b4111a40f62ae85446') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '95866cb3b894816b540afd282b952618') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'fb51df9bca94c25a928f40468354700f') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '33063b7a3d4dbef12ac8bcb55a5e6e3e') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9d3b872769337c49e648b9fe47e4e280') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db0dd437d39c21fe52e1fc05a0680163') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '0cccc4eabf129ebd7b571d3eceda8893') LIMIT 1[0m
+  [4;35;1mContent Load (0.4ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'faaefddee8fa244163b292dad3d752d8') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ff97a702418dbc85fec089b97506281f') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1287233cf9785d72342f930972d71f0d') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ffa787d0aa8b59d8f48d5adc558f4eff') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e1fb638b6ec58434ec3968c2b733a004') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e297614c72684d065aef001f86188732') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6ff50d84edd86fb977b707199dd300bd') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3a1f28b1e560cf597cd3f2a9afade628') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a5c163b0aac371dcb40c4686c640b5ae') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`path` = '/Users/local/Home/Programming/new_content/app/models') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Update (0.3ms)[0m   [0mUPDATE `contents` SET `updated_at` = '2010-01-19 10:38:46', `md5_hash` = 'a5c163b0aac371dcb40c4686c640b5ae' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cfce6ac16974777a93c14be034b2fdec') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '659baf6510f7f53d86f2225edc8e6c8a') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c2c0ef1fba8f79b84d77829dc0f6e755') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be8ff9efffa8df9afa2c5d2a9ec94194') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5db87b03fcaaad7b8901182de77f2e0e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd11330dc228b63ec5cba54c29dc41abd') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ca8db2f40b067cb8615263fa5a238517') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'acc71445fc1c65ebe6fdeba695fea714') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '53b1216a09d1bbd2863d09a5db5318f0') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c28744b57d3e826253b694e67dc2599') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb94f27f9a5522a34fd63cbcffbc27ce') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '16efc327461a7bdac033b4897171b5c6') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6d765178811f083a0fe9d17ce39a88de') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a38904f841ec9a29f5a63853f34f8f9b') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '819cb005c31f30d83e9a9818cf503418') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ed898c4b5ab1fa94ee2275229573165e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6b2973f35d584590c045b1f6bc78a8cb') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '35c28053386649296640217d149b922d') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '7075a37343b98e076aaced69a9607fbe') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`path` = '/Users/local/Home/Programming/new_content/log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Update (0.2ms)[0m   [0;1mUPDATE `contents` SET `updated_at` = '2010-01-19 10:38:46', `md5_hash` = '39f9ba442e17097a5ff175d4f2555312' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'adc851c2e0698b5d05ef0380ed69f6b9') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c6bd78379a0ad92caa6cbef7de676ce8') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b2d690ba72c890af0abdf5ee5c46c94') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c0a079bdd7701d7e729bd956823d153') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b604b957a4e2d82086183ccbc197566') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '8a750594360b0bd302e15147eacadc9a') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '136701e951925f3dcb84f9a231f9326e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3aa08ad9af21eb305a120e2e1a47d1af') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a7d95dc040992701ba78fd5b97af950e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'b5684120e496c310977713be34be4868') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be860f6d2760c884906a9180451d799f') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '17f2f134da4cd31ea095d5868ca89e86') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a58e68a7599c976f071d5b9c6fa67fb3') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb7a6f3db064c7cbd48684501a1964fb') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '623b2f8265970f73bdb3489872d00eb6') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1fd5fa2d4aeee5b4111a40f62ae85446') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '95866cb3b894816b540afd282b952618') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'fb51df9bca94c25a928f40468354700f') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '33063b7a3d4dbef12ac8bcb55a5e6e3e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9d3b872769337c49e648b9fe47e4e280') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db0dd437d39c21fe52e1fc05a0680163') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '0cccc4eabf129ebd7b571d3eceda8893') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'faaefddee8fa244163b292dad3d752d8') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ff97a702418dbc85fec089b97506281f') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1287233cf9785d72342f930972d71f0d') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ffa787d0aa8b59d8f48d5adc558f4eff') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e1fb638b6ec58434ec3968c2b733a004') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e297614c72684d065aef001f86188732') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6ff50d84edd86fb977b707199dd300bd') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3a1f28b1e560cf597cd3f2a9afade628') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '66640f65384cd650bdaf5127c3f94f62') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`path` = '/Users/local/Home/Programming/new_content/app/models') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Update (0.3ms)[0m   [0mUPDATE `contents` SET `updated_at` = '2010-01-19 10:39:26', `md5_hash` = '66640f65384cd650bdaf5127c3f94f62' WHERE `id` = 3[0m
+  [4;36;1mSQL (62.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.3ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cfce6ac16974777a93c14be034b2fdec') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '659baf6510f7f53d86f2225edc8e6c8a') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c2c0ef1fba8f79b84d77829dc0f6e755') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be8ff9efffa8df9afa2c5d2a9ec94194') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5db87b03fcaaad7b8901182de77f2e0e') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd11330dc228b63ec5cba54c29dc41abd') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ca8db2f40b067cb8615263fa5a238517') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'acc71445fc1c65ebe6fdeba695fea714') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '53b1216a09d1bbd2863d09a5db5318f0') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c28744b57d3e826253b694e67dc2599') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb94f27f9a5522a34fd63cbcffbc27ce') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '16efc327461a7bdac033b4897171b5c6') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6d765178811f083a0fe9d17ce39a88de') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a38904f841ec9a29f5a63853f34f8f9b') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '819cb005c31f30d83e9a9818cf503418') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ed898c4b5ab1fa94ee2275229573165e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6b2973f35d584590c045b1f6bc78a8cb') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '35c28053386649296640217d149b922d') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6714edf95e849d6dd2f71e2f927aa1eb') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`path` = '/Users/local/Home/Programming/new_content/log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Update (0.2ms)[0m   [0;1mUPDATE `contents` SET `updated_at` = '2010-01-19 10:39:26', `md5_hash` = '1fef175aa78307dac08ff38f1e047a76' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'adc851c2e0698b5d05ef0380ed69f6b9') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c6bd78379a0ad92caa6cbef7de676ce8') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b2d690ba72c890af0abdf5ee5c46c94') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c0a079bdd7701d7e729bd956823d153') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b604b957a4e2d82086183ccbc197566') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '8a750594360b0bd302e15147eacadc9a') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '136701e951925f3dcb84f9a231f9326e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3aa08ad9af21eb305a120e2e1a47d1af') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a7d95dc040992701ba78fd5b97af950e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'b5684120e496c310977713be34be4868') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be860f6d2760c884906a9180451d799f') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '17f2f134da4cd31ea095d5868ca89e86') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a58e68a7599c976f071d5b9c6fa67fb3') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb7a6f3db064c7cbd48684501a1964fb') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '623b2f8265970f73bdb3489872d00eb6') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1fd5fa2d4aeee5b4111a40f62ae85446') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '95866cb3b894816b540afd282b952618') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'fb51df9bca94c25a928f40468354700f') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '33063b7a3d4dbef12ac8bcb55a5e6e3e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9d3b872769337c49e648b9fe47e4e280') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db0dd437d39c21fe52e1fc05a0680163') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '0cccc4eabf129ebd7b571d3eceda8893') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'faaefddee8fa244163b292dad3d752d8') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ff97a702418dbc85fec089b97506281f') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1287233cf9785d72342f930972d71f0d') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ffa787d0aa8b59d8f48d5adc558f4eff') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e1fb638b6ec58434ec3968c2b733a004') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e297614c72684d065aef001f86188732') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.3ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6ff50d84edd86fb977b707199dd300bd') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3a1f28b1e560cf597cd3f2a9afade628') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '66640f65384cd650bdaf5127c3f94f62') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cfce6ac16974777a93c14be034b2fdec') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '659baf6510f7f53d86f2225edc8e6c8a') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c2c0ef1fba8f79b84d77829dc0f6e755') LIMIT 1[0m
+  [4;36;1mContent Load (0.9ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be8ff9efffa8df9afa2c5d2a9ec94194') LIMIT 1[0m
+  [4;35;1mContent Load (0.3ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5db87b03fcaaad7b8901182de77f2e0e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd11330dc228b63ec5cba54c29dc41abd') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ca8db2f40b067cb8615263fa5a238517') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'acc71445fc1c65ebe6fdeba695fea714') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '53b1216a09d1bbd2863d09a5db5318f0') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c28744b57d3e826253b694e67dc2599') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb94f27f9a5522a34fd63cbcffbc27ce') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '16efc327461a7bdac033b4897171b5c6') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6d765178811f083a0fe9d17ce39a88de') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a38904f841ec9a29f5a63853f34f8f9b') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '819cb005c31f30d83e9a9818cf503418') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ed898c4b5ab1fa94ee2275229573165e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6b2973f35d584590c045b1f6bc78a8cb') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd35d7360488b11602f425f9c3e1ed9c1') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`path` = '/Users/local/Home/Programming/new_content/lib') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContent Update (0.2ms)[0m   [0mUPDATE `contents` SET `updated_at` = '2010-01-19 10:39:34', `md5_hash` = 'd35d7360488b11602f425f9c3e1ed9c1' WHERE `id` = 21[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '15f507ac401c5480a7136c6cd552daf6') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`path` = '/Users/local/Home/Programming/new_content/log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Update (0.1ms)[0m   [0;1mUPDATE `contents` SET `updated_at` = '2010-01-19 10:39:34', `md5_hash` = '587e87163a57938e0896f786049aadd4' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.7ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'adc851c2e0698b5d05ef0380ed69f6b9') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c6bd78379a0ad92caa6cbef7de676ce8') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b2d690ba72c890af0abdf5ee5c46c94') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c0a079bdd7701d7e729bd956823d153') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b604b957a4e2d82086183ccbc197566') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '8a750594360b0bd302e15147eacadc9a') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '136701e951925f3dcb84f9a231f9326e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3aa08ad9af21eb305a120e2e1a47d1af') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a7d95dc040992701ba78fd5b97af950e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'b5684120e496c310977713be34be4868') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be860f6d2760c884906a9180451d799f') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '17f2f134da4cd31ea095d5868ca89e86') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a58e68a7599c976f071d5b9c6fa67fb3') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb7a6f3db064c7cbd48684501a1964fb') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '623b2f8265970f73bdb3489872d00eb6') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1fd5fa2d4aeee5b4111a40f62ae85446') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '95866cb3b894816b540afd282b952618') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'fb51df9bca94c25a928f40468354700f') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '33063b7a3d4dbef12ac8bcb55a5e6e3e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9d3b872769337c49e648b9fe47e4e280') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db0dd437d39c21fe52e1fc05a0680163') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '0cccc4eabf129ebd7b571d3eceda8893') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'faaefddee8fa244163b292dad3d752d8') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ff97a702418dbc85fec089b97506281f') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1287233cf9785d72342f930972d71f0d') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ffa787d0aa8b59d8f48d5adc558f4eff') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e1fb638b6ec58434ec3968c2b733a004') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e297614c72684d065aef001f86188732') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mContent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contents`[0m
+  [4;36;1mContent Load (0.4ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6ff50d84edd86fb977b707199dd300bd') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3a1f28b1e560cf597cd3f2a9afade628') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '66640f65384cd650bdaf5127c3f94f62') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'cfce6ac16974777a93c14be034b2fdec') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '659baf6510f7f53d86f2225edc8e6c8a') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c2c0ef1fba8f79b84d77829dc0f6e755') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be8ff9efffa8df9afa2c5d2a9ec94194') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5db87b03fcaaad7b8901182de77f2e0e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd11330dc228b63ec5cba54c29dc41abd') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ca8db2f40b067cb8615263fa5a238517') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'acc71445fc1c65ebe6fdeba695fea714') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '53b1216a09d1bbd2863d09a5db5318f0') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c28744b57d3e826253b694e67dc2599') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb94f27f9a5522a34fd63cbcffbc27ce') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '16efc327461a7bdac033b4897171b5c6') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6d765178811f083a0fe9d17ce39a88de') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a38904f841ec9a29f5a63853f34f8f9b') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '819cb005c31f30d83e9a9818cf503418') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ed898c4b5ab1fa94ee2275229573165e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '6b2973f35d584590c045b1f6bc78a8cb') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd35d7360488b11602f425f9c3e1ed9c1') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '81bded5214767521e4e5e4888cf70ccb') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`path` = '/Users/local/Home/Programming/new_content/log') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContent Update (0.3ms)[0m   [0;1mUPDATE `contents` SET `updated_at` = '2010-01-19 10:39:37', `md5_hash` = '573be232d23d60e9fb0d57a841e01625' WHERE `id` = 22[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'adc851c2e0698b5d05ef0380ed69f6b9') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'c6bd78379a0ad92caa6cbef7de676ce8') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b2d690ba72c890af0abdf5ee5c46c94') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'd41d8cd98f00b204e9800998ecf8427e') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9c0a079bdd7701d7e729bd956823d153') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '5b604b957a4e2d82086183ccbc197566') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '8a750594360b0bd302e15147eacadc9a') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '136701e951925f3dcb84f9a231f9326e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '3aa08ad9af21eb305a120e2e1a47d1af') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a7d95dc040992701ba78fd5b97af950e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'b5684120e496c310977713be34be4868') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'be860f6d2760c884906a9180451d799f') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '17f2f134da4cd31ea095d5868ca89e86') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'a58e68a7599c976f071d5b9c6fa67fb3') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'bb7a6f3db064c7cbd48684501a1964fb') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '623b2f8265970f73bdb3489872d00eb6') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1fd5fa2d4aeee5b4111a40f62ae85446') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '95866cb3b894816b540afd282b952618') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'fb51df9bca94c25a928f40468354700f') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '33063b7a3d4dbef12ac8bcb55a5e6e3e') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '9d3b872769337c49e648b9fe47e4e280') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'db0dd437d39c21fe52e1fc05a0680163') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '0cccc4eabf129ebd7b571d3eceda8893') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'faaefddee8fa244163b292dad3d752d8') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ff97a702418dbc85fec089b97506281f') LIMIT 1[0m
+  [4;36;1mContent Load (0.2ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = '1287233cf9785d72342f930972d71f0d') LIMIT 1[0m
+  [4;35;1mContent Load (0.2ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'ffa787d0aa8b59d8f48d5adc558f4eff') LIMIT 1[0m
+  [4;36;1mContent Load (0.1ms)[0m   [0;1mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e1fb638b6ec58434ec3968c2b733a004') LIMIT 1[0m
+  [4;35;1mContent Load (0.1ms)[0m   [0mSELECT * FROM `contents` WHERE (`contents`.`md5_hash` = 'e297614c72684d065aef001f86188732') LIMIT 1[0m

@@ -1,0 +1,9 @@
+NewContent
+
+This is a small rails app which scans a directory, generates a MD5 for all the files, then stores
+the MD5, the path and the filename in a database. From there, it detects any new additions or modifications
+to files within that directory structure.
+
+===TO BE DONE===
+Generate the XML page which Boxee can read. Additionally need to generate a Boxee repository so I can load
+the NewContent feed.
